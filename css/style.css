@@ -1,0 +1,378 @@
+/* css/style.css */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { line-height: 1.6; color: #333; }
+header { background: #003366; color: white; display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 15px 50px; }
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+nav a:hover, nav a.active { color: #f39c12; }
+main { padding: 40px 50px; min-height: 60vh; }
+.hero-banner { display: flex; align-items: center; gap: 30px; background: #f4f7f6; padding: 40px; border-radius: 8px; }
+.btn-primary, .btn-secondary { display: inline-block; padding: 10px 20px; background: #003366; color: white; text-decoration: none; border-radius: 5px; margin-top: 15px; }
+.feature-list, .teacher-grid, .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+.feature-item, .teacher-card, .course-item { background: #f9f9f9; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #ddd; }
+.contact-container { display: flex; gap: 40px; margin-top: 20px; }
+.contact-form { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+img { max-width: 100%; height: auto; border-radius: 8px; }
+
+.text-logo {
+    color: white;
+    font-size: 32px;
+    font-weight: 900; 
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.text-logo .highlight {
+    color: #f39c12; 
+}
+
+body {
+    font-size: 112%; /* Tăng 12% toàn trang */
+}
+
+/* Kích thước Tiêu đề lớn */
+.about-header h1, .feedback-header h1 { font-size: 40px; }
+.text-logo, .cta-section h2, .testimonials h2, .branches-section h2, .teachers h2, .team-group-photo h2 { font-size: 36px; }
+
+/* Kích thước Tiêu đề khối (Thẻ card) */
+.team-commitment h3 { font-size: 27px; }
+.branch-card h3, .about-block h3, .teacher-card h3, .btn-cta, .testi-card .stars, .parent-info h4 { font-size: 22px; }
+
+/* Kích thước Chữ nhấn mạnh */
+.cta-section p, .lead-text, .hotline-box strong, .testi-card h4 { font-size: 20px; }
+
+/* Kích thước Văn bản thường */
+.team-commitment p, .branch-card p, .teacher-card p, .testi-card p, .about-block ul li, .about-block p, .feedback-text { font-size: 18px; }
+.hotline-box span { font-size: 16px; }
+.branch-icon { font-size: 40px; }
+
+/* Trạng thái Menu đang chọn và khi di chuột */
+nav a:hover, nav a.active {
+    color: #f39c12;
+}
+
+/* Nút Kêu gọi hành động (CTA) */
+.cta-section {
+    background: linear-gradient(135deg, #003366, #00509e);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 80px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 51, 102, 0.2);
+}
+.cta-section h2 { margin-bottom: 15px; }
+.cta-section p { margin-bottom: 35px; opacity: 0.9; }
+
+.btn-cta {
+    background: #f39c12;
+    color: white;
+    padding: 16px 40px;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(243, 156, 18, 0.4);
+}
+.btn-cta:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(243, 156, 18, 0.6);
+}
+
+/* --- Cảm nhận học viên --- */
+.testimonials { text-align: center; margin-top: 60px; }
+.testimonials h2 { margin-bottom: 30px; color: #003366; }
+.testimonial-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+.testi-card {
+    background: white; padding: 30px; border-radius: 10px;
+    max-width: 450px; border-top: 4px solid #f39c12;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease;
+}
+.testi-card:hover { transform: translateY(-5px); }
+.testi-card .stars { margin-bottom: 15px; }
+.testi-card p { font-style: italic; margin-bottom: 15px; color: #555; line-height: 1.8; }
+.testi-card h4 { color: #003366; }
+
+/* --- Hệ thống cơ sở --- */
+.branches-section { text-align: center; margin-top: 60px; padding: 40px 0; }
+.branches-section h2 { color: #003366; margin-bottom: 10px; }
+.section-desc { color: #666; margin-bottom: 35px; }
+.branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 0 20px; }
+.branch-card {
+    background: #ffffff; border: 1px solid #e0e0e0; border-radius: 10px;
+    padding: 30px 20px; text-align: left; display: flex; flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+.branch-card:hover { box-shadow: 0 8px 25px rgba(0, 51, 102, 0.1); }
+.branch-icon { margin-bottom: 15px; }
+.branch-card h3 { color: #003366; margin-bottom: 10px; }
+.branch-card p { color: #555; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+.hotline-box {
+    background: #f9f9f9; padding: 12px; border-radius: 4px;
+    border-left: 4px solid #f39c12; display: flex;
+    justify-content: space-between; align-items: center;
+}
+.hotline-box span { color: #555; }
+.hotline-box strong { color: #f39c12; }
+
+/* Cân bằng ảnh khóa học */
+.course-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: block;
+}
+/* Xóa dấu chấm thừa và căn lề chữ */
+.course-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 25px 0;
+}
+.course-info ul li { margin-bottom: 8px; color: #444; }
+
+/* --- Giới thiệu chung --- */
+.about-us { margin-bottom: 60px; }
+.about-header { text-align: center; margin-bottom: 40px; }
+.about-header h1 { color: #003366; text-transform: uppercase; margin-bottom: 15px; }
+.lead-text { color: #555; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+.about-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.about-block {
+    background: #f9fbfd; padding: 30px; border-radius: 10px;
+    border-top: 4px solid #f39c12; transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.05);
+}
+.about-block:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0, 51, 102, 0.1); }
+.about-block h3 { color: #003366; margin-bottom: 15px; }
+.about-block p { color: #444; line-height: 1.6; }
+.about-block ul { list-style: none; padding-left: 0; }
+.about-block ul li { position: relative; padding-left: 25px; margin-bottom: 12px; color: #444; line-height: 1.5; }
+.about-block ul li::before { content: "✓"; color: #f39c12; font-weight: bold; position: absolute; left: 0; top: 0; }
+
+/* --- Đội ngũ giảng viên --- */
+.teachers h2, .team-group-photo h2 { color: #003366; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Card giáo viên */
+.teacher-card { text-align: center; }
+.teacher-card img {
+    width: 100%; height: auto; aspect-ratio: 4 / 3;
+    object-fit: cover; object-position: center 10%;
+    border-radius: 8px; display: block;
+}
+.teacher-card h3 { color: #003366; margin-top: 15px; margin-bottom: 10px; }
+.teacher-card h3::after {
+    content: ""; display: block; width: 40px; height: 3px;
+    background-color: #f39c12; margin: 10px auto 0;
+}
+.teacher-card p { color: #555; line-height: 1.6; }
+.teacher-card:hover { box-shadow: 0 8px 20px rgba(0, 51, 102, 0.15); border-color: #003366; transition: all 0.3s ease; }
+
+/* Cam kết đội ngũ */
+.team-commitment {
+    display: flex; align-items: center; gap: 30px; background: #f4f7f6;
+    padding: 30px; border-radius: 10px; margin-top: 40px; border-left: 6px solid #f39c12;
+}
+.team-commitment .team-img { flex: 1; max-width: 40%; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.team-commitment .team-text { flex: 2; }
+.team-commitment h3 { color: #003366; margin-bottom: 15px; }
+.team-commitment p { color: #444; line-height: 1.6; }
+.team-commitment strong { color: #d35400; }
+
+@media (max-width: 768px) {
+    .team-commitment { flex-direction: column; text-align: center; border-left: none; border-top: 6px solid #f39c12; }
+    .team-commitment .team-img { max-width: 100%; }
+}
+
+/* Ảnh tập thể lớn */
+.team-group-photo { width: 100%; }
+.full-width-img { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); object-fit: cover; }
+
+.feedback-header { text-align: center; margin-bottom: 50px; }
+.feedback-header h1 { color: #003366; text-transform: uppercase; margin-bottom: 15px; }
+
+/* Bọc thanh trượt */
+.slider-wrapper { position: relative; width: 100%; overflow: hidden; padding: 20px 0; }
+.slider-container { width: 100%; }
+.feedback-track { display: flex; gap: 20px; transition: transform 0.5s ease-in-out; padding: 10px; }
+
+/* Thẻ Feedback */
+.feedback-card {
+    flex: 0 0 30%; min-width: 320px; background: #ffffff;
+    border-radius: 12px; padding: 35px 30px; position: relative;
+    border-top: 5px solid #003366; box-shadow: 0 4px 15px rgba(0, 51, 102, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feedback-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0, 51, 102, 0.15); }
+
+/* Chữ và biểu tượng */
+.quote-icon {
+    font-size: 70px; color: #f39c12; opacity: 0.2; position: absolute;
+    top: 5px; right: 20px; font-family: Georgia, serif; line-height: 1;
+}
+.feedback-text { font-style: italic; color: #555; line-height: 1.8; margin-bottom: 25px; position: relative; z-index: 1; }
+.parent-info { border-top: 1px dashed #dcdcdc; padding-top: 20px; }
+.parent-info h4 { color: #003366; margin-bottom: 5px; }
+.parent-info span { color: #777; font-size: 0.9em; }
+
+/* Nút bấm trượt mờ */
+.slider-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4); color: white; border: none;
+    width: 50px; height: 50px; border-radius: 50%; font-size: 24px;
+    cursor: pointer; z-index: 10; display: flex; justify-content: center;
+    align-items: center; backdrop-filter: blur(4px); transition: background 0.3s;
+}
+.slider-btn:hover { background: rgba(0, 0, 0, 0.7); }
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.contact-wrapper {
+    padding: 60px 20px;
+    background-color: #f4f7f6; /* Nền xám nhạt làm nổi bật thẻ form */
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 51, 102, 0.1);
+    overflow: hidden; /* Cắt góc tròn cho cả 2 cột */
+}
+
+/* Cột trái: Thông tin */
+.contact-info {
+    flex: 4; /* Chiếm 40% chiều rộng */
+    background: linear-gradient(135deg, #003366, #001f4d);
+    color: white;
+    padding: 50px 40px;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #f39c12; /* Nhấn màu cam */
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-list .icon {
+    font-size: 24px;
+    background: rgba(255,255,255,0.1);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.info-detail strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #f39c12;
+}
+
+/* Cột phải: Form */
+.contact-form {
+    flex: 6; /* Chiếm 60% chiều rộng */
+    padding: 50px 60px;
+}
+
+.contact-form h2 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Hiệu ứng ô nhập liệu mượt mà */
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #f39c12; /* Đổi màu viền sang cam khi nhấp vào */
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.2);
+}
+
+/* Nút Submit mới */
+.btn-submit {
+    width: 100%;
+    background: #003366;
+    color: white;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #f39c12;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(243, 156, 18, 0.3);
+}
+
+/* Responsive: Đẩy 2 cột nằm dọc trên điện thoại */
+@media (max-width: 768px) {
+    .contact-card {
+        flex-direction: column;
+    }
+    .contact-form {
+        padding: 40px 25px;
+    }
+}
